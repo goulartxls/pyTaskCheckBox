@@ -10,7 +10,7 @@ def RenderMenu(list):
     os.system('cls')
     print("-----------List----------")
     RenderTasks(list)
-    print("---------------------")
+    print("-------------------------")
     print("1 - Add Task")
     print("2 - Finish Task")
     print("3 - Remove Task")
@@ -25,7 +25,7 @@ def RenderTasks(list):
                 Check = '✓'
             print(f"{position + 1}  - {task} - [{Check}]")
     else: 
-        print("Nenhum item na lista!")
+        print("No items in the list!")
 def RemoveTask(index):
     Tasks.pop(index)
     CheckBox.pop(index)
