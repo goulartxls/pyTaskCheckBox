@@ -1,3 +1,5 @@
+import os
+import time
 global Tasks 
 global CheckBox
 global Running
@@ -5,6 +7,7 @@ Running = True
 Tasks = []
 CheckBox = []
 def RenderMenu(list):
+    os.system('cls')
     print("-----------List----------")
     RenderTasks(list)
     print("---------------------")
@@ -50,10 +53,12 @@ def Main():
             RemoveTask(TaskIndex - 1)
         else:
             print("This choice not exist!")
+            time.sleep(2)
     elif choice == 0:
         Running = False
     else:
         print("Invalid choice!")
+        time.sleep(2)
 while True:
     if Running:
         Main()
